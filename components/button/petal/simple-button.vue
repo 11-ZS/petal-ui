@@ -1,5 +1,6 @@
 <template>
-    <button class="p-button" :class="[
+    <button class="p-simple-button" 
+	:class="[
 	type?'p-type-'+type:'',
 	size?'p-size-'+size:'',
 	]">
@@ -9,49 +10,44 @@
 
 <script>
 export default {
-    name: "p-button",
+    name: "p-s-button",
     props: {
         type: {
             type: String,
             default: ""
-        },
-        size: {
-            type: String,
-            default: "default"
-        }
+		},
+		size:{
+			type:String,
+			default:'default'
+		}
     }
 };
 </script>
 <style >
-.p-button {
+.p-simple-button {
     vertical-align: top;
-    box-sizing: border-box;
+	box-sizing:border-box;
     border: none;
     outline: none;
     padding: 0 10px;
-  
-    border: 1px solid rgb(218, 218, 218);
-    background: white;
-}
-.p-button .p-roll-tag,
-.p-button .p-tag {
-    border: none;
-}
-.p-size-default {
-     line-height: 36px;
-    height: 36px;
+    line-height: 36px;
+	height:36px;
     font-size: 20px;
+	border:1px solid rgb(218, 218, 218); 	
+	background:white;
+	
 }
-
-.p-size-medium {
-    font-size: 14px;
-    height: 34px;
-    line-height: 34px;
+.p-simple-button .p-roll-tag,.p-simple-button .p-tag  {
+    border: none;
+} 
+.p-size-default{
+	font-size:24px;
 }
-.p-size-small ,.p-size-small *{
-    font-size: 12px;
-    height: 28px;
-    line-height: 28px;
+.p-size-medium{
+	font-size:24px;
+}
+.p-size-small{
+	font-size:24px;
 }
 /* .roll-button{
 	padding:0px;

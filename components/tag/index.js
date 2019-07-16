@@ -1,10 +1,9 @@
-import PButton from './petal/button'
-// import PSButton from './petal/simple-button'
+import PTag from './petal/tag'
+import PRTag from './petal/roll-tag'
 
 const components = [
-	PButton,
-	// PSButton
- 
+	PTag,
+	PRTag
 ] 
 
 export default {
