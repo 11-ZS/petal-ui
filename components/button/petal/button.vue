@@ -1,9 +1,13 @@
 <template>
     <button class="p-button" :class="[
-	type?'p-type-'+type:'',
-	size?'p-size-'+size:'',
+   	type?'p-type-'+type:'',
+   	size?'p-size-'+size:'',
+      {
+         'p-button-round':round
+      }
 	]">
-        <slot></slot>
+        <slot v-if="this.$slots.default"></slot>
+       <template v-else>button</template>
     </button>
 </template>
 
@@ -18,7 +22,11 @@ export default {
         size: {
             type: String,
             default: "default"
-        }
+        },
+        round:Boolean
+    },
+    mounted(){
+      console.log(this)
     }
 };
 </script>
@@ -29,10 +37,16 @@ export default {
     border: none;
     outline: none;
     padding: 0 10px;
-  
+
+
     border: 1px solid rgb(218, 218, 218);
     background: white;
 }
+
+.p-button-round{
+   border-radius:18px;
+}
+
 .p-button .p-roll-tag,
 .p-button .p-tag {
     border: none;

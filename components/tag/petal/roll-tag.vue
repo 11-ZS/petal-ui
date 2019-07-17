@@ -1,5 +1,6 @@
 <template>
     <div class="p-roll-tag" >
+    <!-- 这里改为条件触发滚动,如hover,blur,click,clickup,double click,key ....-->
         <span class="p-roll-tall-children">
             <slot></slot>
         </span>
