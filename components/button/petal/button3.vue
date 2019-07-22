@@ -14,10 +14,10 @@ export default {
     },
     mounted() {
         //对this.$slots.default[0].tag进行解析,undifined跳过,其他的如a,button,vue-component-2-RouterLink的取代其中的内容重新编译
-        if (this.$slots.default[0].tag) {
-            this.$slots.default[0].text = `aa`;
-        }
-        console.log(this.$slots.default);
+        // if (this.$slots.default[0].tag) {
+        //     this.$slots.default[0].text = `aa`;
+        // }
+        // console.log(this.$slots.default);
     }
 };
 </script>
