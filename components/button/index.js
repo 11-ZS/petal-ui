@@ -1,5 +1,7 @@
-import PButton from './petal/button'
+// import PButton from './petal/button'
 // import PSButton from './petal/simple-button'
+
+import PButton from './petal/button3'
 
 const components = [
 	PButton,
